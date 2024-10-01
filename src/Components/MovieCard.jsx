@@ -17,7 +17,7 @@ const MovieCard=({movieCard})=>{
           <Card.Text>
             {movieCard.overview}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Site officiel</Button>
         </Card.Body>
       </Card>
       </>;
