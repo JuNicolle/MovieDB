@@ -25,7 +25,7 @@ useEffect(()=>{
     return <> 
         <div className="d-flex flex-column align-items-center">
             <h1>{movie.title}</h1>
-            <p>Budget : {movie.budget}$</p>
+            <p>Date de sortie : {movie.release_date}</p>
             <div className="d-flex gap-4 mb-3">
             {movie.genres && movie.genres.map((genre)=>{
                 return <Button className="mt-3"variant="warning" key={genre.id} size="lg">{genre.name}</Button>

@@ -27,15 +27,15 @@ import MovieCard from '../Components/MovieCard';
     },[currentPage]);
 
     return <>
-        <div>
-            Details du genre {id}
+        <div className="d-flex justify-content-center flex-wrap gap-3">Films par genre</div>
+        <div className="d-flex justify-content-center flex-wrap gap-3">
             {movies.map((movie) => {
                return <MovieCard key={movie.id} movieCard={movie}></MovieCard>
             })}
 
         </div>
         
-        <div>
+        <div className="d-flex justify-content-center flex-wrap gap-3">
         <Pagination className="mt-5">
             {currentPage > 1 && <>
                 <Pagination.First onClick={() => { setCurrentPage(1) }} />

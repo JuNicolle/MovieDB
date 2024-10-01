@@ -25,7 +25,7 @@ const HomePage = () => {
     }, [currentPage])
 
 
-    return <Container className="d-flex flex-column align-items-center">
+    return <Container className="d-flex flex-column align-items-center flex-wrap">
         <h1>Films du moment</h1>
         <div className="d-flex justify-content-center flex-wrap gap-3">
             {movies.map((movie) => {
