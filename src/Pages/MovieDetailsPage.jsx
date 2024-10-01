@@ -34,7 +34,6 @@ useEffect(()=>{
             <img style={{ height: '30rem' }} src={"https://image.tmdb.org/t/p/original"+movie.poster_path}></img>
             <p className="mt-4">Résumé : {movie.overview}</p>
         </div>
-
     </>
 }
 

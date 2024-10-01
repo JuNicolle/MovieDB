@@ -3,18 +3,19 @@ import {useParams} from 'react-router-dom';
 import { useEffect } from "react";
 import GenreServices from '../Services/GenreServices';
 import { Pagination } from 'react-bootstrap';
+import MovieCard from '../Components/MovieCard';
    
    const GenreDetailsPage = () => {
     const {id} = useParams();
-    const [movies, setMovies] = useState({});
+    const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [maxPage, setMaxPage] = useState(500);
 
-    
+   
     const fetchFilmByGenre = async ()=>{
         try{
             const response = await GenreServices.getMoviesByGenreID(currentPage, id);
-            console.log(response);
+            console.log(response.data.results);
             setMovies(response.data.results);
         } catch (error){
             console.log(error);
@@ -28,7 +29,12 @@ import { Pagination } from 'react-bootstrap';
     return <>
         <div>
             Details du genre {id}
+            {movies.map((movie) => {
+               return <MovieCard key={movie.id} movieCard={movie}></MovieCard>
+            })}
+
         </div>
+        
         <div>
         <Pagination className="mt-5">
             {currentPage > 1 && <>
