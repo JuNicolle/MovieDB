@@ -1,3 +1,23 @@
 body{
     background-color: bisque;
 }
+
+.me-auto > a{
+    gap: 10px;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:hover{
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.card{
+    border-radius: 30px;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.big-body-tertiary{
+    gap: 10px;
+}

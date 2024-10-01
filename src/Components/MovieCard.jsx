@@ -1,10 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard=({movieCard})=>{
-    console.log(movieCard);
+  // Pour passer l'ID dans l'URL, on utilise le hook useNavigate de react-router-dom
+    const navigate=useNavigate();
+    const navigateTo=(id)=>{
+        navigate("/movie/"+id)
+    }
+
     return <>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} onClick={()=>{navigateTo(movieCard.id)}}>
         <Card.Img variant="top" src={"https://image.tmdb.org/t/p/original"+movieCard.poster_path} />
         <Card.Body>
           <Card.Title>{movieCard.title}</Card.Title>

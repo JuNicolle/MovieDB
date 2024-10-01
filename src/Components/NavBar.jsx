@@ -5,17 +5,22 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () =>{  
     return <>
-<Navbar expand="lg" className="bg-body-tertiary">
-<Container>
-  <Navbar.Brand ><Link to={"/"}>Accueil</Link></Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="me-auto">
-      <Link to={"/Genres"}>GenresPages</Link>
-    </Nav>
-  </Navbar.Collapse>
-</Container>
-</Navbar>
+    <Navbar className="bg-body-tertiary">
+        <Container>
+            <Navbar.Brand className="me-auto">
+                <Link to={"/"} className="nav-link">Accueil</Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link className="mx-2">
+                        <Link to={"/Genres"} className="nav-link">Genres</Link>
+                    </Nav.Link>
+                    {/* Ajoutez d'autres liens ici avec le même format si nécessaire */}
+                </Nav>
+            </Navbar.Collapse>
+        </Container>
+    </Navbar>
 </>
 
 }

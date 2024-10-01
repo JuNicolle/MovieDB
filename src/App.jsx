@@ -4,6 +4,7 @@ import './App.css'
 import HomePage from './Pages/HomePage'
 import GenrePage from './Pages/GenrePage'
 import NavBar from './Components/NavBar';
+import MovieDetailsPage from './Pages/MovieDetailsPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/Genres' element={<GenrePage/>}/>
+          <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
