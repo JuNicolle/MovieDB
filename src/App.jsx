@@ -7,6 +7,7 @@ import NavBar from './Components/NavBar';
 import MovieDetailsPage from './Pages/MovieDetailsPage';
 import GenreDetailsPage from './Pages/GenreDetailsPage';
 import ActorsPage from './Pages/ActorsPage';
+import ActorDetailPage from './Pages/ActorDetailPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
           <Route path='/Genres/:id' element={<GenreDetailsPage/>}/>
           <Route path='/Actors' element={<ActorsPage/>}/>
+          <Route path='/Actors/:id' element={<ActorDetailPage/>}/>
         </Routes>
       </BrowserRouter>
     </>

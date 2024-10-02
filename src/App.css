@@ -50,3 +50,12 @@ h1{
     gap: 1rem;
     color: wheat
 }
+
+p{
+    color: whitesmoke;
+}
+
+.biography{
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
