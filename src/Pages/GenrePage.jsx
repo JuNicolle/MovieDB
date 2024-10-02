@@ -22,7 +22,7 @@ const GenrePage = () => {
         
         return <Container className="d-flex flex-column align-items-center">
         <h1>Selectionnez votre categorie</h1>
-        <div className="d-flex justify-content-center flex-wrap gap-3">
+        <div className="listGenre">
         {genres.map((genre) => {
             return <GenreCard genreCard={genre} key={genre.id}></GenreCard>
         })}

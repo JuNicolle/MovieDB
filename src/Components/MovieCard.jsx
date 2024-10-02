@@ -10,7 +10,7 @@ const MovieCard=({movieCard})=>{
     }
 
     return <>
-      <Card style={{ width: '18rem' }} onClick={()=>{navigateTo(movieCard.id)}}>
+      <Card style={{ width: '18rem'}} onClick={()=>{navigateTo(movieCard.id)}}>
         <Card.Img variant="top" src={"https://image.tmdb.org/t/p/original"+movieCard.poster_path} />
         <Card.Body>
           <Card.Title>{movieCard.title}</Card.Title>

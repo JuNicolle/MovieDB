@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 const GenreCard=({genreCard})=>{
     const navigate=useNavigate();
-    const navigateTo=(id)=>{
-        navigate("/Genres/"+id)
+    const navigateTo=(genre)=>{
+        navigate("/Genres/"+genre.id,{state:{"genre":genre}})
     }
   
 
   return (
     <div className="d-grid gap-2">
-      <Button variant="primary" size="lg" onClick={()=>{navigateTo(genreCard.id)}}>
+      <Button variant="danger" size="lg" onClick={()=>{navigateTo(genreCard)}}>
         {genreCard.name}
       </Button>
     </div>

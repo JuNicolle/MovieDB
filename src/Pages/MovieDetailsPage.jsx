@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import MoviesServices from "../Services/MoviesServices";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
 
 const MovieDetailsPage = () => {
     const { id } = useParams();
@@ -18,6 +20,11 @@ const MovieDetailsPage = () => {
         }
     }
 
+    const navigate=useNavigate();
+    const navigateTo=(genre)=>{
+        navigate("/Genres/"+genre.id,{state:{"genre":genre}})
+    }
+
 useEffect(()=>{
     fetchMovieById();
 },[])
@@ -28,7 +35,7 @@ useEffect(()=>{
             <p>Date de sortie : {movie.release_date}</p>
             <div className="d-flex gap-4 mb-3">
             {movie.genres && movie.genres.map((genre)=>{
-                return <Button className="mt-3"variant="warning" key={genre.id} size="lg">{genre.name}</Button>
+                return <Button  className="mt-3"variant="warning" key={genre.id} size="lg" onClick={()=>{navigateTo(genre)}}>{genre.name} </Button>
             })}
             </div>
             <img style={{ height: '30rem' }} src={"https://image.tmdb.org/t/p/original"+movie.poster_path}></img>

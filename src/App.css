@@ -1,5 +1,6 @@
 body{
-    background-color: bisque;
+    background-image: url(./assets/cinema.jpg);
+    background-size: cover; /* Couvre l'espace disponible */
 }
 
 .me-auto > a{
@@ -22,3 +23,30 @@ body{
     gap: 10px;
 }
 
+.listGenre{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 12vh;
+}
+
+h1{
+    color: whitesmoke;
+}
+
+.nav-link{
+    color: whitesmoke;
+}
+
+.nav-link:hover{
+    color: red;
+}
+
+.categoryPart{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: wheat
+}
